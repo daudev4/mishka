@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Daud Sultygov](https://up.htmlacademy.ru/adaptive/16/user/869301).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Вечканов](https://htmlacademy.ru/profile/id902303).
 
 ---
 
