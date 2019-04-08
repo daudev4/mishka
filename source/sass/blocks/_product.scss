@@ -1,0 +1,35 @@
+.product__image {
+  display: block;
+}
+
+.product__image-link {
+  display: block;
+}
+
+.product__info {
+  padding: 27px 28px 28px;
+
+  text-align: left;
+
+  box-shadow: inset 0 0 0 1px $grey--dark;
+}
+
+.product__title {
+  margin: 0;
+
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, #000000);
+}
+
+.product__description {
+  margin: 0;
+
+  @include font-mix($font-family, 400, $font-size--xxxs, $font-line-height--m, normal, $grey--darkest);
+}
+
+.product__buy {
+  margin: 0;
+}
+
+.product__price {
+  @include font-mix($font-family, 700, $font-size--xxs, $font-line-height--s, normal, #000000);
+}

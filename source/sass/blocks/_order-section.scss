@@ -1,0 +1,18 @@
+.order-section {
+  padding-top: 23px;
+  padding-bottom: 55px;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.order-section__inner {
+  padding: 0 30px;
+}
+
+.order-section__foreword {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @include font-mix($font-family, 400, $font-size--xxxs, $font-line-height--s, normal, $grey--darkest);
+}

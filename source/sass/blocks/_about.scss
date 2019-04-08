@@ -1,0 +1,37 @@
+.about {
+  padding-top: 27px;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.about__inner {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 31px;
+
+  @include font-mix($font-family, 700, $font-size--xl, $font-line-height--m, normal, #000000);
+  text-align: left;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about__item {
+  margin-bottom: 30px;
+}
+
+.about__item-title {
+  margin: 0;
+
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--xs, normal, #000000);
+  text-align: left;
+}

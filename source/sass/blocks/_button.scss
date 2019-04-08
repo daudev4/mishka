@@ -1,0 +1,14 @@
+.button {
+  display: block;
+  width: 100%;
+  padding: 16px 10px;
+
+  @include font-mix($font-family, 700, $font-size--s, $font-line-height--xs, normal, $grey--darkest);
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: none;
+  box-shadow: inset 0 0 0 2px $grey--darkest;
+  cursor: pointer;
+}

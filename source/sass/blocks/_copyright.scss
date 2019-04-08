@@ -1,0 +1,4 @@
+.copyright__link {
+  @include font-mix($font-family, 700, $font-size--m, $font-line-height--xs, normal, #000000);
+  text-align: left;
+}

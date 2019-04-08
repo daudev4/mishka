@@ -1,0 +1,8 @@
+@mixin font-mix($family: $font-family, $weight: 400, $size: $font-size--xs, $line-height: $font-line-height--s, $style: normal, $color: #000000) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  font-style: $style;
+  line-height: $line-height;
+  color: $color;
+}
