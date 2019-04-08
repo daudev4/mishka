@@ -1,0 +1,74 @@
+.best-seller {
+  color: #000000;
+  background-color: #ffffff;
+
+  &::after {
+    content: "";
+
+    display: block;
+    height: 7px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: 320px 100%;
+    transform: rotate(180deg);
+  }
+}
+
+.best-seller__inner {
+  padding-top: 27px;
+  padding-right: 30px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+}
+
+.best-seller__heading {
+  margin-bottom: 23px;
+}
+
+.best-seller__title {
+  margin: 0;
+  margin-bottom: 5px;
+
+  @include font-mix($font-family, 700, $font-size--xl, $font-line-height--m, normal, #000000);
+  text-align: left;
+}
+
+.best-seller__label {
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--xs, normal, $seafoam);
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.best-seller__description {
+  @include font-mix($font-family, 400, $font-size--xxs, $font-line-height--s, normal, $grey--darkest);
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.best-seller__text {
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.best-seller__picture {
+  margin-bottom: 24px;
+}
+
+.best-seller__image {
+  display: block;
+}
+
+.best-seller__buy {
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, $grey--darkest);
+  text-align: center;
+}
+
+.best-seller__price {
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.best-seller__button {
+  font-size: 17px;
+}
