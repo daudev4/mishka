@@ -16,6 +16,7 @@
 
   @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, #000000);
 }
+
 .production__video {
   background-color: $grey--darker;
 }
@@ -61,7 +62,7 @@
     font-size: $font-size--l;
   }
 
-  .production__description  {
+  .production__description {
     padding-top: 0;
     padding-right: 42px;
     padding-bottom: 46px;

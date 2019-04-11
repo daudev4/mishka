@@ -97,6 +97,7 @@
       background-size: 768px 100%;
     }
   }
+
   .best-seller__inner {
     display: flex;
     flex-wrap: wrap;
@@ -134,10 +135,10 @@
   }
 
   .best-seller__text {
-/* Временно старт */
+    // Временно старт
     min-height: 77px;
     margin-bottom: 38px;
-// Временно конец
+    // Временно конец
 
     font-size: $font-size--xs;
     line-height: $font-line-height--m;
@@ -176,6 +177,7 @@
 @media (min-width: $screen-desktop) {
   .best-seller {
     margin-top: -18px;
+
     &::before {
       height: 37px;
       background-position: 50% 50%;
@@ -187,6 +189,7 @@
       background-size: 1050px 100%;
     }
   }
+
   .best-seller__inner {
     max-width: 1150px;
     margin: 0 auto;
