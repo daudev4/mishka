@@ -1,6 +1,5 @@
 .best-seller {
   color: #000000;
-  background-color: #ffffff;
 
   &::after {
     content: "";
@@ -9,7 +8,7 @@
     height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position: 0 0;
+    background-position: 50% 100%;
     background-size: 320px 100%;
     transform: rotate(180deg);
   }
@@ -51,6 +50,12 @@
   margin-bottom: 22px;
 }
 
+.best-seller__specs {
+  /* Временно старт */
+  min-height: 116px;
+  // Временно конец
+}
+
 .best-seller__picture {
   margin-bottom: 24px;
 }
@@ -66,9 +71,160 @@
 
 .best-seller__price {
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 26px;
 }
 
-.best-seller__button {
-  font-size: 17px;
+@media (min-width: $screen-tablet) {
+  .best-seller {
+    position: relative;
+    margin-top: -12px;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 100%;
+      height: 24px;
+      background-color: transparent;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: 50% 100%;
+      background-size: 770px 100%;
+    }
+
+    &::after {
+      height: 17px;
+      background-size: 768px 100%;
+    }
+  }
+  .best-seller__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 33px;
+    padding-right: 50px;
+    padding-bottom: 52px;
+    padding-left: 50px;
+  }
+
+  .best-seller__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  .best-seller__title {
+    font-size: $font-size--xxxl;
+    line-height: $font-line-height--l;
+  }
+
+  .best-seller__label {
+    width: 70px;
+    margin-right: 28px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .best-seller__description {
+    width: 50%;
+    margin-bottom: 0;
+    padding-right: 44px;
+    padding-bottom: 110px;
+  }
+
+  .best-seller__text {
+/* Временно старт */
+    min-height: 77px;
+    margin-bottom: 38px;
+// Временно конец
+
+    font-size: $font-size--xs;
+    line-height: $font-line-height--m;
+  }
+
+
+  .best-seller__specs {
+    /* Временно старт */
+    min-height: 118px;
+    // Временно конец
+  }
+
+  .best-seller__picture {
+    width: 50%;
+    /* Временно старт*/
+    min-height: 412px;
+    /* Временно конец*/
+    margin-bottom: 0;
+    padding-top: 8px;
+  }
+
+  .best-seller__buy {
+    z-index: 2;
+
+    width: 50%;
+    margin-top: -110px;
+    padding-right: 44px;
+  }
+
+  .best-seller__price {
+    font-size: $font-size--l;
+    margin-bottom: 34px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .best-seller {
+    margin-top: -18px;
+    &::before {
+      height: 37px;
+      background-position: 50% 50%;
+      background-size: 1250px 100%;
+    }
+
+    &::after {
+      height: 23px;
+      background-size: 1050px 100%;
+    }
+  }
+  .best-seller__inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 73px;
+  }
+
+  .best-seller__heading {
+    z-index: 10;
+    justify-content: flex-start;
+    margin-bottom: -182px;
+    padding-left: 47px;
+  }
+
+  .best-seller__title {
+    font-size: $font-size--xxxxl;
+    line-height: $font-line-height--xl;
+  }
+
+  .best-seller__label {
+    order: -1;
+    margin-right: 55px;
+    padding-top: 2px;
+  }
+
+  .best-seller__description {
+    margin-top: 166px;
+    padding-left: 175px;
+  }
+
+  .best-seller__picture {
+    // Временно старт
+    min-height: 644px;
+    // Временно конец
+  }
+
+  .best-seller__buy {
+    padding-left: 175px;
+    padding-right: 58px;
+  }
 }

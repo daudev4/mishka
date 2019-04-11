@@ -1,4 +1,24 @@
+.copyright {
+  margin: 0;
+}
+
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // Временно старт
+  &::after {
+    content: "";
+
+    width: 27px;
+    height: 34px;
+    background-color: red;
+  }
+  // Временно конец
   @include font-mix($font-family, 700, $font-size--m, $font-line-height--xs, normal, #000000);
   text-align: left;
+}
+
+.copyright__link-text {
+  padding-bottom: 5px;
 }

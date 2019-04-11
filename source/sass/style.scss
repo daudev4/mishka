@@ -11,14 +11,19 @@
 @import "blocks/_about";
 @import "blocks/_reviews";
 @import "blocks/_contacts";
-@import "blocks/_main-footer";
 @import "blocks/_social";
+@import "blocks/_main-footer";
 @import "blocks/_copyright.scss";
 @import "blocks/_goods.scss";
 @import "blocks/_product.scss";
 @import "blocks/_production.scss";
 @import "blocks/_order-section.scss";
 @import "blocks/_order-form.scss";
-// @import "blocks/_radio-item.scss";
-// @import "blocks/_checkbox-item.scss";
+@import "blocks/_radio-item.scss";
+@import "blocks/_checkbox-item.scss";
 @import "blocks/_text-item.scss";
+
+// * {
+//   outline: 1px solid rgba(red, 0.3);
+//   background-color: rgba(red, 0.05);
+// }

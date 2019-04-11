@@ -1,3 +1,7 @@
+.banner_main-page {
+  background-color: $grey--light;
+}
+
 .banner__title {
   margin: 0;
 
@@ -32,7 +36,7 @@
   min-height: 103px;
   padding-top: 25px;
   padding-bottom: 15px;
-  padding-left: 30px;
+  padding-left: 29px;
 
   @include font-mix($font-family, 700, $font-size--m, $font-line-height--s, normal, #ffffff);
 }
@@ -47,4 +51,67 @@
 
 .banner__link_toys {
   background-color: $greeny;
+}
+
+@media (min-width: $screen-tablet) {
+  .banner__inner {
+    padding-top: 95px;
+    padding-bottom: 79px;
+  }
+
+  .banner__inner_image {
+    padding-top: 153px;
+    padding-bottom: 373px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: 50% 0;
+    background-size: 1150px 746px;
+  }
+
+  .banner__title {
+    font-size: $font-size--xxxl;
+    line-height: $font-line-height--l;
+  }
+
+  .banner__buttons {
+    display: flex;
+    padding: 0 50px;
+  }
+
+  .banner__link {
+    min-height: 119px;
+    padding-top: 28px;
+    padding-right: 36px;
+  }
+
+  .banner__link-text {
+    font-size: $font-size--l;
+    line-height: $font-line-height--m;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .banner__inner {
+    width: auto;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 93px;
+    padding-bottom: 103px;
+  }
+
+  .banner__inner_image {
+    padding-bottom: 359px;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
+  }
+
+  .banner__title {
+    font-size: $font-size--xxxxl;
+    line-height: $font-line-height--xl;
+  }
+
+  .banner__buttons {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
 }
