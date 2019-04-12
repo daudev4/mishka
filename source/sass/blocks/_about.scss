@@ -6,6 +6,9 @@
 }
 
 .about__inner {
+  /* Временно старт */
+  min-height: 769px;
+  // Временно конец
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -34,4 +37,73 @@
 
   @include font-mix($font-family, 700, $font-size--xs, $font-line-height--xs, normal, #000000);
   text-align: left;
+}
+
+@media (min-width: $screen-tablet) {
+  .about {
+    padding-top: 49px;
+  }
+
+  .about__inner {
+    // Временно старт
+    min-height: 545px;
+    // Временно конец
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .about__title {
+    font-size: $font-size--xxxl;
+    line-height: $font-line-height--l;
+  }
+
+  .about__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about__item {
+    width: 50%;
+  }
+
+  .about__item:nth-of-type(1) {
+    order: -3;
+  }
+
+  .about__item:nth-of-type(2) {
+    order: -1;
+  }
+
+  .about__item:nth-of-type(4) {
+    order: -2;
+  }
+
+  .about__item:nth-of-type(5) {
+    order: -1;
+  }
+
+  .about__item-title {
+    max-width: 300px;
+
+    font-size: $font-size--l;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .about {
+    padding-top: 59px;
+  }
+
+  .about__inner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .about__title {
+    font-size: $font-size--xxxxl;
+    line-height: $font-line-height--xl;
+  }
 }

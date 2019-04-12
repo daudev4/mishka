@@ -3,7 +3,7 @@
   width: 100%;
   padding: 16px 10px;
 
-  @include font-mix($font-family, 700, $font-size--s, $font-line-height--xs, normal, $grey--darkest);
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--xs, normal, $grey--darkest);
   text-align: center;
   text-transform: uppercase;
 
