@@ -1,1 +1,36 @@
-//empty
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 23px;
+
+    background-color: transparent;
+    border: 2px solid $grey--darkest;
+  }
+}
+
+.checkbox-item__label {
+  padding-top: 12px;
+}
+
+@media (min-width: $screen-tablet) {
+  .checkbox-item {
+    align-items: center;
+
+    &::before {
+      width: 54px;
+      height: 52px;
+      margin-right: 27px;
+    }
+  }
+
+  .checkbox-item__label {
+    padding-top: 0;
+  }
+}

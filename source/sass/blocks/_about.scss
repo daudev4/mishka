@@ -6,16 +6,13 @@
 }
 
 .about__inner {
-  /* Временно старт */
-  min-height: 769px;
-  // Временно конец
   padding-right: 30px;
   padding-left: 30px;
 }
 
 .about__title {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
 
   @include font-mix($font-family, 700, $font-size--xl, $font-line-height--m, normal, #000000);
   text-align: left;
@@ -29,7 +26,61 @@
 }
 
 .about__item {
-  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 94px;
+
+  margin-bottom: 29px;
+}
+
+.about__item:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__item-icon {
+  path {
+    fill: $seafoam;
+  }
+}
+
+.about__item-icon_flower {
+  width: 32px;
+  height: 37px;
+  margin-left: 8px;
+}
+
+.about__item-icon_money {
+  width: 47px;
+  height: 27px;
+  margin-top: 1px;
+}
+
+.about__item-icon_heart {
+  width: 34px;
+  height: 27px;
+  margin-top: 6px;
+  margin-left: 7px;
+}
+
+.about__item-icon_ball {
+  width: 35px;
+  height: 34px;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.about__item-icon_rocket {
+  width: 55px;
+  height: 23px;
+  margin-top: 4px;
+}
+
+.about__item-icon_gift {
+  width: 33px;
+  height: 32px;
+  margin-top: 2px;
+  margin-left: 3px;
 }
 
 .about__item-title {
@@ -45,14 +96,13 @@
   }
 
   .about__inner {
-    // Временно старт
-    min-height: 545px;
-    // Временно конец
     padding-right: 50px;
     padding-left: 50px;
   }
 
   .about__title {
+    margin-bottom: 49px;
+
     font-size: $font-size--xxxl;
     line-height: $font-line-height--l;
   }
@@ -64,6 +114,12 @@
 
   .about__item {
     width: 50%;
+    min-height: 98px;
+    margin-bottom: 57px;
+  }
+
+  .about__item:nth-last-of-type(4) {
+    margin-bottom: 0;
   }
 
   .about__item:nth-of-type(1) {

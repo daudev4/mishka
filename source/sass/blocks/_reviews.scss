@@ -1,5 +1,5 @@
 .reviews {
-  padding-top: 27px;
+  padding-top: 55px;
 
   color: #000000;
   background-color: #ffffff;
@@ -64,9 +64,7 @@
 
 .reviews__arrows {
   width: 100%;
-  /* Временно старт */
-  min-height: 52px;
-  // Временно конец
+  height: 52px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
@@ -77,18 +75,28 @@
   padding: 13px 0;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 38px 12px;
   border: 1px solid $grey--dark;
+  cursor: pointer;
 }
 
-@media (max-width: $screen-tablet - 1px) {
-  .reviews__button {
-    font-size: $font-size--s;
-  }
+.reviews__arrow_prev {
+  background-image: url("../img/icon-left-arrow.svg");
 }
+
+.reviews__arrow_next {
+  background-image: url("../img/icon-right-arrow.svg");
+}
+
+.reviews__button {
+  font-size: $font-size--s;
+}
+
 
 @media (min-width: $screen-tablet) {
   .reviews {
-    padding-top: 45px;
+    padding-top: 83px;
 
     &::after {
       min-width: 768px;
@@ -98,7 +106,7 @@
   }
 
   .reviews__background {
-    padding-bottom: 70px;
+    padding-bottom: 68px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -114,7 +122,7 @@
     align-items: flex-start;
     padding-top: 77px;
     padding-right: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 17px;
     padding-left: 50px;
   }
 
@@ -130,6 +138,8 @@
     width: 175px;
     margin-top: 2px;
     margin-left: auto;
+
+    font-size: $font-size--xs;
   }
 
   .reviews__text {
@@ -146,34 +156,29 @@
   .reviews__arrows {
     z-index: 10;
     position: absolute;
-    bottom: 47px;
+    bottom: 49px;
     right: 69px;
 
     width: 137px;
-    height: 26px;
     margin-bottom: 0;
   }
 
   .reviews__arrow {
-    // Временно старт
     width: 50px;
-    height: 52px;
-    background-color: red;
-    // Временно конец
+    background-position: 0 13px;
     border: none;
-  }
-
-  .reviews__arrow_prev {
-    margin-right: 37px;
   }
 }
 
 @media (min-width: $screen-desktop) {
   .reviews {
-    padding-top: 59px;
+    padding-top: 90px;
 
     &::after {
+      width: 1050px;
       height: 23px;
+      margin: 0 auto;
+
       background-size: 1050px 100%;
     }
   }
@@ -210,6 +215,6 @@
   }
 
   .reviews__arrows {
-    bottom: 97px;
+    bottom: 98px;
   }
 }

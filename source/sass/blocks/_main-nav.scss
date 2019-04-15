@@ -57,23 +57,16 @@
   list-style: none;
 }
 
+.main-nav__list_extra {
+  display: none;
+}
+
+.main-nav__text {
+  display: none;
+}
+
 .main-nav__item {
   border-bottom: 1px solid $grey--dark;
-}
-
-.main-nav__list_user .main-nav__link {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 32px;
-}
-
-.main-nav__link-icon {
-  box-sizing: content-box;
-  display: inline-block;
-  width: 20px;
-  margin-right: 24px;
-  padding-top: 4px;
 }
 
 .main-nav__link {
@@ -85,6 +78,38 @@
   @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, #000000);
 }
 
+.main-nav__link_cart {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 31px;
+}
+
+.main-nav__link_search {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 33px;
+}
+
+.main-nav__link-icon {
+  box-sizing: content-box;
+  display: inline-block;
+  height: 18px;
+  margin-right: 24px;
+  padding-top: 4px;
+}
+
+.main-nav__link-icon_cart {
+  width: 21px;
+  padding-top: 2px;
+}
+
+.main-nav__link-icon_search {
+  width: 18px;
+  padding-top: 4px;
+}
+
 .main-nav__link-text {
   display: block;
 }
@@ -92,11 +117,12 @@
 @media (min-width: $screen-tablet) {
   .main-header {
     max-height: 89px;
-    border-bottom: 1px solid $grey--dark;
+    border-bottom: 1px solid $grey--darken;
   }
 
   .main-nav {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-height: 89px;
     padding: 0 50px;
@@ -105,7 +131,6 @@
   .main-nav__head {
     padding: 0;
     padding-top: 22px;
-    margin-right: auto;
 
     border-bottom: none;
 
@@ -127,23 +152,31 @@
     justify-content: flex-end;
   }
 
+  .main-nav__list_extra {
+    display: none;
+  }
+
   .main-nav__list_user {
     flex-grow: 1;
+    min-width: 60%;
   }
 
   .main-nav__list_site {
     order: 1;
   }
 
-  .main-nav__item {
-    border: none;
+  .main-nav__text {
+    order: 2;
+    display: block;
+    margin: 0;
+    padding-top: 17px;
+    padding-bottom: 25px;
+
+    @include font-mix($font-family, 400, $font-size--xxs, $font-line-height--s, normal, $grey--darkest);
   }
 
-  .main-nav__list_user .main-nav__link {
-    padding-top: 31px;
-    padding-bottom: 34px;
-    padding-left: 33px;
-    border-left: 1px solid $grey--dark;
+  .main-nav__item {
+    border: none;
   }
 
   .main-nav__list_site .main-nav__link {
@@ -154,6 +187,16 @@
     background-color: transparent;
 
     font-size: $font-size--xxs;
+  }
+
+  .main-nav__list_user .main-nav__link {
+    padding-top: 31px;
+    padding-bottom: 34px;
+    border-left: 1px solid $grey--dark;
+  }
+
+  .main-nav__link-icon {
+    margin-right: 31px;
   }
 
   .main-nav__link-text_hidden {
@@ -167,11 +210,26 @@
     margin: 0 auto;
   }
 
+  .main-nav__head {
+    padding-top: 9px;
+    transform: translateX(-30px);
+  }
+
+  .main-nav__list_user {
+    flex-grow: 0;
+    min-width: 348px;
+    padding-right: 2px;
+  }
+
   .main-nav__list_site {
     order: -1;
   }
 
-  .main-nav__list_site .main-nav__link {
+  .main-nav__list_extra {
+    display: flex;
+  }
+
+  .main-nav__item_site .main-nav__link {
     padding-top: 31px;
     padding-right: 36px;
     padding-bottom: 34px;
@@ -179,5 +237,25 @@
     background-color: transparent;
 
     font-size: $font-size--xs;
+  }
+
+  .main-nav__item_site:not(:first-of-type) .main-nav__link {
+    padding-left: 33px;
+
+    border-left: 1px solid $grey--dark;
+  }
+
+  .main-nav__item_extra .main-nav__link {
+    padding-top: 17px;
+    padding-right: 37px;
+    padding-bottom: 25px;
+    padding-left: 0;
+    background-color: transparent;
+
+    font-size: $font-size--xxs;
+  }
+
+  .main-nav__item_extra:not(:first-of-type) .main-nav__link {
+    padding-left: 24px;
   }
 }

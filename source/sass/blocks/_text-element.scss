@@ -1,0 +1,80 @@
+.text-element {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.text-element__label {
+  padding-top: 4px;
+}
+
+.text-element__input {
+  padding: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.text-element__input_phone {
+  padding-top: 11px;
+  padding-bottom: 13px;
+  font-size: $font-size--m;
+}
+
+.text-element_message.order-form__title {
+  margin-bottom: 25px;
+}
+
+.text-element__textarea {
+  width: 100%;
+  min-height: 142px;
+  padding: 14px;
+
+  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+
+  border: 2px solid #000000;
+}
+
+@media (min-width: $screen-tablet) {
+  .text-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+
+  .text-element_message {
+    align-items: flex-start;
+  }
+
+  .text-element .order-form__title {
+    padding-top: 0;
+  }
+
+  .text-element_message .order-form__title {
+    padding-top: 17px;
+  }
+
+  .text-element__input {
+    margin-left: auto;
+    padding-top: 11px;
+    padding-left: 16px;
+    padding-bottom: 13px;
+
+    font-size: $font-size--m;
+  }
+
+  .text-element__textarea {
+    margin-left: auto;
+    padding-top: 13px;
+    padding-left: 15px;
+
+    font-size: $font-size--m;
+  }
+}
