@@ -14,7 +14,6 @@
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid $grey--darkest;
-
   }
 }
 
@@ -24,15 +23,16 @@
 
 @media (min-width: $screen-tablet) {
   .radio-item__label {
-  align-items: center;
+    align-items: center;
+
     &::before {
       width: 52px;
       height: 52px;
       margin-right: 28px;
     }
   }
-}
 
-.radio-item__label-text {
-  padding-top: 0;
+  .radio-item__label-text {
+    padding-top: 0;
+  }
 }

@@ -12,7 +12,6 @@
 
     background-color: transparent;
     border: 2px solid $grey--darkest;
-
   }
 }
 
@@ -22,7 +21,7 @@
 
 @media (min-width: $screen-tablet) {
   .checkbox-item {
-  align-items: center;
+    align-items: center;
 
     &::before {
       width: 54px;
@@ -30,8 +29,8 @@
       margin-right: 27px;
     }
   }
-}
 
-.checkbox-item__label {
-  padding-top: 0;
+  .checkbox-item__label {
+    padding-top: 0;
+  }
 }
