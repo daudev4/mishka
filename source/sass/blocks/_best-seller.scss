@@ -47,13 +47,24 @@
 
 .best-seller__text {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .best-seller__specs {
-  /* Временно старт */
-  min-height: 116px;
-  // Временно конец
+  width: 100%;
+  line-height: $font-line-height--xs;
+  border-collapse: collapse;
+}
+
+.best-seller__row {
+  border-bottom: 1px solid $grey--darker;
+}
+
+.best-seller__row td {
+  min-width: 81px;
+  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 10px;
 }
 
 .best-seller__picture {
@@ -135,20 +146,14 @@
   }
 
   .best-seller__text {
-    // Временно старт
-    min-height: 77px;
-    margin-bottom: 38px;
-    // Временно конец
+    margin-bottom: 36px;
 
     font-size: $font-size--xs;
     line-height: $font-line-height--m;
   }
 
-
-  .best-seller__specs {
-    /* Временно старт */
-    min-height: 118px;
-    // Временно конец
+  .best-seller__row td {
+    min-width: 68px;
   }
 
   .best-seller__picture {
@@ -180,11 +185,16 @@
 
     &::before {
       height: 37px;
+
+
       background-position: 50% 50%;
       background-size: 1250px 100%;
     }
 
     &::after {
+      width: 1050px;
+      margin: 0 auto;
+
       height: 23px;
       background-size: 1050px 100%;
     }
@@ -218,6 +228,19 @@
   .best-seller__description {
     margin-top: 166px;
     padding-left: 175px;
+  }
+
+  .best-seller__text {
+    margin-bottom: 50px;
+  }
+
+  .best-seller__row td {
+    padding-top: 7px;
+    padding-bottom: 12px;
+  }
+
+  .best-seller__row td:first-child {
+    width: 98px;
   }
 
   .best-seller__picture {

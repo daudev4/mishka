@@ -5,30 +5,39 @@
   text-align: left;
 }
 
-.text-item_phone {
-  font-size: $font-size--s;
-}
-
 .text-item__label {
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .text-item__input {
   padding: 0;
-  padding-top: 14px;
-  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
   @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
 
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid #000000;
 }
 
-.text-item__textarea {
-  width: 100%;
-  padding: 16px;
+@media (min-width: $screen-tablet) {
+  .text-item {
+    flex-direction: row;
+    align-items: center;
+  }
 
-  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  .text-item__label {
+    margin-right: 25px;
+    padding-top: 0;
+  }
 
-  border: 2px solid #000000;
+  .text-item__input {
+    width: 100%;
+    padding-top: 11px;
+    padding-left: 16px;
+    padding-bottom: 13px;
+
+    font-size: $font-size--m;
+  }
 }

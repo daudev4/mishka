@@ -1,1 +1,38 @@
-//empty
+.radio-item__label {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 23px;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid $grey--darkest;
+
+  }
+}
+
+.radio-item__label-text {
+  padding-top: 9px;
+}
+
+@media (min-width: $screen-tablet) {
+  .radio-item__label {
+  align-items: center;
+    &::before {
+      width: 52px;
+      height: 52px;
+      margin-right: 28px;
+    }
+  }
+}
+
+.radio-item__label-text {
+  padding-top: 0;
+}
