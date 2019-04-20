@@ -14,11 +14,20 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, $grey--darkest);
 
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus {
+    border-color: $seafoam;
+  }
+
+  &::placeholder {
+    @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  }
 }
 
 @media (min-width: $screen-tablet) {

@@ -1,12 +1,14 @@
 .text-element {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
   text-align: left;
 }
 
-.text-element__label {
-  padding-top: 4px;
+.text-element__title {
+  margin-bottom: 7px;
 }
 
 .text-element__input {
@@ -14,11 +16,27 @@
   padding-top: 16px;
   padding-bottom: 16px;
 
-  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, $grey--darkest);
 
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #000000;
+
+  &:hover,
+  &:focus {
+    border-color: $seafoam;
+  }
+
+  &::placeholder {
+    @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  }
+}
+
+.text-element__input:hover + .text-element__icon,
+.text-element__input:focus + .text-element__icon {
+  path {
+    fill: $seafoam;
+  }
 }
 
 .text-element__input_phone {
@@ -27,7 +45,25 @@
   font-size: $font-size--m;
 }
 
-.text-element_message.order-form__title {
+.text-element__icon {
+  position: absolute;
+
+  path {
+    fill: rgba($icon-original, 0.2);
+  }
+}
+
+.text-element__icon_phone {
+  right: 8px;
+  bottom: 17px;
+}
+
+.text-element__icon_mail {
+  right: 4px;
+  bottom: 9px;
+}
+
+.text-element_message .text-element__title {
   margin-bottom: 25px;
 }
 
@@ -36,9 +72,18 @@
   min-height: 142px;
   padding: 14px;
 
-  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, $grey--darkest);
 
-  border: 2px solid #000000;
+  border: 2px solid $grey--darkest;
+
+  &:hover,
+  &:focus {
+    border-color: $seafoam;
+  }
+
+  &::placeholder {
+    @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+  }
 }
 
 @media (min-width: $screen-tablet) {
@@ -76,5 +121,23 @@
     padding-left: 15px;
 
     font-size: $font-size--m;
+  }
+
+  .text-element__icon_phone {
+    right: 26px;
+  }
+
+  .text-element__icon_mail {
+    right: 22px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .text-element__icon_phone {
+    right: 8px;
+  }
+
+  .text-element__icon_mail {
+    right: 4px;
   }
 }

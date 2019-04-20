@@ -30,10 +30,21 @@
 .main-nav__logo {
   display: block;
   padding-right: 2px;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__logo-image {
   display: block;
+  width: 85px;
+  height: 35px;
 }
 
 .main-nav__toggle {
@@ -76,6 +87,7 @@
   padding-bottom: 28px;
 
   @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, #000000);
+  @include link-effects();
 }
 
 .main-nav__link_cart {
@@ -98,6 +110,10 @@
   height: 18px;
   margin-right: 24px;
   padding-top: 4px;
+
+  path {
+    fill: rgba($icon-original, 0.2);
+  }
 }
 
 .main-nav__link-icon_cart {
@@ -123,6 +139,7 @@
   .main-nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     max-height: 89px;
     padding: 0 50px;
@@ -130,7 +147,6 @@
 
   .main-nav__head {
     padding: 0;
-    padding-top: 22px;
 
     border-bottom: none;
 
@@ -141,6 +157,11 @@
 
   .main-nav__logo {
     padding-right: 0;
+  }
+
+  .main-nav__logo-image {
+    width: 112px;
+    height: auto;
   }
 
   .main-nav__toggle {
@@ -211,8 +232,12 @@
   }
 
   .main-nav__head {
-    padding-top: 9px;
     transform: translateX(-30px);
+  }
+
+  .main-nav__logo-image {
+    width: 149px;
+    height: auto;
   }
 
   .main-nav__list_user {

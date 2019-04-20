@@ -3,6 +3,8 @@
 $screen-mobile: 320px !default;
 $screen-tablet: 768px !default;
 $screen-desktop: 1150px !default;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 // Colors
 $grey: #f1f1f1 !default;
@@ -17,6 +19,8 @@ $white: #ffffff !default;
 $black: #000000 !default;
 $seafoam: #63d1bb !default;
 $greeny: #56c3b2 !default;
+
+$icon-original: #231f20 !default;
 
 // Fonts
 $font-family: "Open Sans", arial, sans-serif;
