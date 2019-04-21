@@ -6,19 +6,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // Временно старт
-  &::after {
-    content: "";
 
-    width: 27px;
-    height: 34px;
-    background-color: red;
-  }
-  // Временно конец
-  @include font-mix($font-family, 700, $font-size--m, $font-line-height--xs, normal, #000000);
+  @include font-mix($font-family, 700, $font-size--m, $font-line-height--xs, normal, $black);
   text-align: left;
+
+  @include link-effects (#000000, 1, 0.3, $greeny, 1 , 0.3);
 }
 
 .copyright__link-text {
   padding-bottom: 5px;
+}
+
+.copyright__link-icon {
+  width: 42px;
+  height: 42px;
+
+  path {
+    fill: $seafoam;
+  }
 }

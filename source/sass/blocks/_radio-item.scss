@@ -1,6 +1,10 @@
 .radio-item__label {
+  position: relative;
+
   display: flex;
   align-items: flex-start;
+
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -14,6 +18,36 @@
     background-color: transparent;
     border-radius: 50%;
     border: 2px solid $grey--darkest;
+  }
+
+  &:hover::before {
+    border-color: $seafoam;
+  }
+
+  &:active::before {
+    border-color: rgba($grey--darkest, 0.3);
+  }
+}
+
+.radio-item__input:focus + .radio-item__label {
+  &::before {
+    border-color: $seafoam;
+  }
+}
+
+.radio-item__input:checked + .radio-item__label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $seafoam;
+    border-radius: 50%;
   }
 }
 
@@ -29,6 +63,16 @@
       width: 52px;
       height: 52px;
       margin-right: 28px;
+    }
+  }
+
+  .radio-item__input:checked + .radio-item__label {
+    &::after {
+      top: 15px;
+      left: 15px;
+
+      width: 22px;
+      height: 22px;
     }
   }
 

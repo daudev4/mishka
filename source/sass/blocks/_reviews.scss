@@ -76,9 +76,18 @@
 
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 38px 12px;
+  background-position: 50% 12px;
   border: 1px solid $grey--dark;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__arrow_prev {
@@ -112,6 +121,10 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 350px 457px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__inner {

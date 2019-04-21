@@ -21,3 +21,22 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@mixin link-effects($color: $black, $opacity1: 0.6, $opacity2: 0.3, $fill: $seafoam, $icon-opacity1: 1, $icon-opacity2: 0.3) {
+  &[href]:hover,
+  &[href]:focus {
+    color: rgba($color, $opacity1);
+
+    path {
+      fill: rgba($fill, $icon-opacity1);
+    }
+  }
+
+  &[href]:active {
+    color: rgba($color, $opacity2);
+
+    path {
+      fill: rgba($fill, $icon-opacity2);
+    }
+  }
+}

@@ -41,8 +41,17 @@
 }
 
 .contacts__email {
-  color: inherit;
+  color: $grey--darkest;
   box-shadow: inset 0 -1px 0 0 $seafoam;
+
+  &:hover,
+  &:focus {
+    color: $greeny;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__text {
@@ -55,8 +64,9 @@
 }
 
 .map__image {
-  height: 457px;
   display: block;
+  height: 457px;
+  margin: 0 auto;
 }
 
 .contacts__button-wrapper {

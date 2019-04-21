@@ -43,7 +43,9 @@
 
   .main-footer__logo {
     display: block;
-    padding-bottom: 6px;
+    padding-bottom: 15px;
+
+    @include link-effects($black, 1, 0.3, $greeny, 1, 0.3);
   }
 
   .main-footer__logo-image {
@@ -58,7 +60,6 @@
 
   .main-footer__copyright {
     padding: 0;
-    padding-top: 8px;
 
     border: none;
   }
