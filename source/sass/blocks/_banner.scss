@@ -55,11 +55,6 @@
     background-color: $greeny;
   }
 
-  path {
-    opacity: 0.5;
-    fill: #149080;
-  }
-
   @include link-effects($white, 1, 0.3, #149080, 0.6, 0.3);
 
   &:hover,
@@ -67,6 +62,10 @@
     min-height: 108px;
     margin-top: -5px;
   }
+}
+
+.banner__link-icon {
+  fill: rgba(#149080, 0.5);
 }
 
 .banner__link_interior .banner__link-icon {
@@ -119,6 +118,10 @@
     &:hover,
     &:focus {
       min-height: 124px;
+    }
+
+    .banner__link-icon {
+      margin-right: 0;
     }
   }
 

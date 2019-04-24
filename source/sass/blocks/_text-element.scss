@@ -34,9 +34,7 @@
 
 .text-element__input:hover + .text-element__icon,
 .text-element__input:focus + .text-element__icon {
-  path {
-    fill: $seafoam;
-  }
+  fill: $seafoam;
 }
 
 .text-element__input_phone {
@@ -48,9 +46,7 @@
 .text-element__icon {
   position: absolute;
 
-  path {
-    fill: rgba($icon-original, 0.2);
-  }
+  fill: rgba($icon-original, 0.2);
 }
 
 .text-element__icon_phone {

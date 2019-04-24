@@ -67,11 +67,11 @@
 }
 
 .product__cart {
-  path {
-    fill: rgba($icon-original, 0.2);
-  }
-
   @include link-effects();
+}
+
+.product__cart-icon {
+  fill: rgba($icon-original, 0.2);
 }
 
 @media (min-width: $screen-tablet) {
