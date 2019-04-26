@@ -27,7 +27,7 @@
   &[href]:focus {
     color: rgba($color, $opacity1);
 
-    path {
+    svg {
       fill: rgba($fill, $icon-opacity1);
     }
   }
@@ -35,7 +35,7 @@
   &[href]:active {
     color: rgba($color, $opacity2);
 
-    path {
+    svg {
       fill: rgba($fill, $icon-opacity2);
     }
   }

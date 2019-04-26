@@ -67,17 +67,16 @@
 }
 
 .product__cart {
-  path {
-    fill: rgba($icon-original, 0.2);
-  }
-
   @include link-effects();
+}
+
+.product__cart-icon {
+  fill: rgba($icon-original, 0.2);
 }
 
 @media (min-width: $screen-tablet) {
   .product {
     display: flex;
-    min-height: 334px;
   }
 
   .product__image-link {
@@ -116,11 +115,9 @@
 
   .product__image-link {
     width: 100%;
-    min-height: 462px;
   }
 
   .product__info {
-    height: 100%;
     width: 100%;
     min-height: 197px;
     padding-left: 27px;
