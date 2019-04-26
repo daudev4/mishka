@@ -67,7 +67,6 @@
   }
 
   .production__video {
-    min-height: 455px;
     order: -1;
   }
 
@@ -111,6 +110,7 @@
 
   .production__video {
     width: 682px;
+    height: 100%;
   }
 
   .production__title-wrapper {
