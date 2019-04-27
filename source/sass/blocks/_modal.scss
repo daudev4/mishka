@@ -1,0 +1,143 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  display: none;
+  width: 100%;
+  height: 100vh;
+
+  background-color: rgba($white, 0.9);
+  overflow: auto;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  display: none;
+  width: 320px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow:
+    inset 0 0 0 1px $grey--dark,
+    0 5px 10px 0 rgba(0, 1, 1, 0.25);
+}
+
+.modal_show {
+  display: block;
+}
+
+.modal_show + .modal__background {
+  display: block;
+}
+
+.modal__inner {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 46px;
+  padding-left: 30px;
+}
+
+.modal__title {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 12px;
+
+  @include font-mix($font-family, 700, $font-size--xl, $font-line-height--m, normal, $black);
+  text-transform: uppercase;
+}
+
+.modal__text {
+  margin: 0 auto;
+  margin-bottom: 23px;
+
+  @include font-mix($font-family, 400, $font-size--xxs, $font-line-height--m, normal, $grey--darkest);
+}
+
+.modal__size-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 31px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.modal__size-item {
+  flex-grow: 1;
+  min-width: 82px;
+  margin-right: 7px;
+}
+
+.modal__size-item:last-of-type {
+  margin-right: 0;
+}
+
+.modal__size-label {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+
+  @include font-mix($font-family, 700, $font-size--xs, $font-line-height--xxxs, normal, $grey--darkest);
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 2px solid rgba($grey--darkest, 0.1);
+}
+
+.modal__size-checkbox:hover + .modal__size-label,
+.modal__size-checkbox:focus + .modal__size-label {
+  border-color: rgba($grey--darkest, 0.3);
+}
+
+.modal__size-checkbox:checked + .modal__size-label {
+  border-color: $seafoam;
+}
+
+.modal__button {
+  color: $white;
+  line-height: 16px;
+
+  background-color: $seafoam;
+  box-shadow: none;
+
+  &:hover,
+  &:focus {
+    background-color: $seafoam;
+  }
+}
+
+@media (min-width: $screen-tablet) {
+  .modal {
+    min-width: 566px;
+  }
+
+  .modal__inner {
+    padding-top: 34px;
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+
+  .modal__title {
+    width: 100%;
+
+    font-size: 30px;
+    line-height: $font-line-height--xl;
+    letter-spacing: -0.3px;
+  }
+
+  .modal__text {
+    font-size: $font-size--xs;
+  }
+}
+
