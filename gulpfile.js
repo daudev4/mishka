@@ -19,6 +19,8 @@ var svgstore = require("gulp-svgstore");
 var cheerio = require("gulp-cheerio");
 var cclean   = require('gulp-cheerio-clean-svg');
 
+var buildFolder = "build";
+
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -30,13 +32,13 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest(buildFolder + "/css"))
     .pipe(server.stream());
 });
 
 gulp.task("html", function() {
   return gulp.src("source/*.html")
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest(buildFolder));
 })
 
 gulp.task("sprite", function () {
@@ -46,7 +48,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest(buildFolder + "/img"));
 });
 
 gulp.task("images", function () {
@@ -57,13 +59,13 @@ gulp.task("images", function () {
       imagemin.svgo()
     ]))
 
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest(buildFolder + "/img"));
 });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest(buildFolder + "/img"));
 });
 
 gulp.task("copy", function () {
@@ -76,11 +78,11 @@ gulp.task("copy", function () {
     ], {
       base: "source"
     })
-    .pipe(gulp.dest("build"));
+    .pipe(gulp.dest(buildFolder));
 });
 
 gulp.task("clean", function () {
-  return del("build");
+  return del(buildFolder);
 });
 
 gulp.task("refresh", function (done) {
@@ -90,7 +92,7 @@ gulp.task("refresh", function (done) {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
+    server: buildFolder + "/",
     notify: false,
     open: true,
     cors: true,
@@ -104,7 +106,7 @@ gulp.task("server", function () {
 
 gulp.task("start", gulp.series("css", "server"));
 
-gulp.task("build", gulp.series(
+gulp.task(buildFolder, gulp.series(
   "clean",
   "copy",
   "css",
