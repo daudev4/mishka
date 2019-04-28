@@ -4,14 +4,23 @@
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "del": "^4.1.0",
     "gulp": "4.0.x",
+    "gulp-cheerio": "^0.6.3",
+    "gulp-cheerio-clean-svg": "github:Hiswe/gulp-cheerio-clean-svg",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "1.2.x",
-    "gulp-sourcemaps": "2.6.x",
     "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
     "gulp-sass": "4.0.x",
-    "@htmlacademy/editorconfig-cli": "1.x",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
@@ -19,7 +28,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp css",
+    "build": "gulp build",
     "start": "gulp start"
   },
   "browserslist": [
@@ -37,5 +46,6 @@
   ],
   "engines": {
     "node": "8.15"
-  }
+  },
+  "dependencies": {}
 }

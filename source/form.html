@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/svgxuse.min.js" defer=""></script>
   </head>
   <body>
     <header class="main-header">
@@ -101,7 +101,7 @@
                 </span>
                 <ul class="order-form__group-list">
                   <li class="order-form__radio-item radio-item">
-                    <input class="radio-item__input visually-hidden" type="radio" name="product type" value="accessory" id="accessory-field" checked>
+                    <input class="radio-item__input visually-hidden" type="radio" name="product type" value="accessory" id="accessory-field" checked="">
                     <label class="radio-item__label" for="accessory-field">
                       <span class="radio-item__label-text">
                         Аксессуар для интерьера
@@ -126,13 +126,13 @@
                 </span>
                 <ul class="order-form__group-list order-form__group-list_colors">
                   <li class="order-form__checkbox-item checkbox-item">
-                    <input class="checkbox-item__input visually-hidden" type="checkbox" name="white" value="yes" id="white-field" checked>
+                    <input class="checkbox-item__input visually-hidden" type="checkbox" name="white" value="yes" id="white-field" checked="">
                     <label class="checkbox-item__label" for="white-field">
                       Белый
                     </label>
                   </li>
                   <li class="order-form__checkbox-item checkbox-item">
-                    <input class="checkbox-item__input visually-hidden" type="checkbox" name="gray" value="yes" id="gray-field" checked>
+                    <input class="checkbox-item__input visually-hidden" type="checkbox" name="gray" value="yes" id="gray-field" checked="">
                     <label class="checkbox-item__label" for="gray-field">
                       Серый
                     </label>
@@ -174,13 +174,13 @@
                     <label class="text-item__label" for="name-field">
                       Имя:
                     </label>
-                    <input class="text-item__input text-item__input_name" type="text" name="name" value="" placeholder="Введите ваше имя*" id="name-field" required>
+                    <input class="text-item__input text-item__input_name" type="text" name="name" value="" placeholder="Введите ваше имя*" id="name-field" required="">
                   </li>
                   <li class="order-form__text-item text-item">
                     <label class="text-item__label" for="surname-field">
                       Фамилия:
                     </label>
-                    <input class="text-item__input text-item__input_surname" type="text" name="surname" value="" placeholder="Укажите фамилию*" id="surname-field" required>
+                    <input class="text-item__input text-item__input_surname" type="text" name="surname" value="" placeholder="Укажите фамилию*" id="surname-field" required="">
                   </li>
                   <li class="order-form__text-item text-item">
                     <label class="text-item__label" for="patronymic-field">
@@ -197,7 +197,7 @@
                   <label class="order-form__title text-element__title" for="phone-field">
                     Тел
                   </label>
-                  <input class="text-element__input text-element__input_phone" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="phone-field" required>
+                  <input class="text-element__input text-element__input_phone" type="tel" name="phone" value="" placeholder="+7 ХХХ ХХХ ХХ ХХ*" id="phone-field" required="">
                   <svg class="text-element__icon text-element__icon_phone" width="24.83" height="24.33">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
@@ -206,7 +206,7 @@
                   <label class="order-form__title text-element__title" for="email-field">
                     E-mail
                   </label>
-                  <input class="text-element__input" type="email" name="email" value="" placeholder="Ваш Email*" id="email-field" required>
+                  <input class="text-element__input" type="email" name="email" value="" placeholder="Ваш Email*" id="email-field" required="">
                   <svg class="text-element__icon text-element__icon_mail" width="32" height="32">
                     <use xlink:href="img/sprite.svg#icon-mail"></use>
                   </svg>

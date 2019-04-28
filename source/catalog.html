@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svgxuse.min.js" defer></script>
+    <script src="js/svgxuse.min.js" defer=""></script>
   </head>
   <body>
     <header class="main-header">
@@ -220,15 +220,21 @@
               </h3>
             </div>
             <div class="production__video">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <div class="production__video-preview">
+                <a class="production__video-play" href="#">
+                  <span class="visually-hidden">Запуск видео</span>
+                </a>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
 
-                <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-                <img class="product__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео о процессе производства">
-              </picture>
+                  <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                  <img class="product__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео о процессе производства">
+                </picture>
+              </div>
+              <div class="production__video-content"></div>
             </div>
             <div class="production__description">
               <p class="production__text">
