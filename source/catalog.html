@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgxuse.min.js" defer></script>
   </head>
@@ -220,15 +220,21 @@
               </h3>
             </div>
             <div class="production__video">
-              <picture>
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+              <div class="production__video-preview">
+                <a class="production__video-play" href="#">
+                  <span class="visually-hidden">Запуск видео</span>
+                </a>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
 
-                <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-                <img class="product__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео о процессе производства">
-              </picture>
+                  <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                  <img class="product__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Превью видео о процессе производства">
+                </picture>
+              </div>
+              <div class="production__video-content"></div>
             </div>
             <div class="production__description">
               <p class="production__text">
@@ -297,5 +303,44 @@
         </p>
       </div>
     </footer>
+        <div class="modal__wrapper">
+      <div class="modal">
+        <div class="modal__inner">
+          <h2 class="modal__title">
+            Добавить в корзину
+          </h2>
+          <p class="modal__text">
+            Выберите размер:
+          </p>
+          <form action="https://echo.htmlacademy.ru">
+            <ul class="modal__size-list">
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_small" id="size_small">
+                <label class="modal__size-label" for="size_small">
+                  s
+                </label>
+              </li>
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_medium" id="size_medium">
+                <label class="modal__size-label" for="size_medium">
+                  m
+                </label>
+              </li>
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_large" id="size_large">
+                <label class="modal__size-label" for="size_large">
+                  l
+                </label>
+              </li>
+            </ul>
+            <button class="modal__button button" type="submit">
+              Добавить
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal__background"></div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>

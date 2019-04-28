@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
     <script src="js/svgxuse.min.js" defer></script>
   </head>
@@ -154,7 +154,7 @@
             <p class="best-seller__price">
               Цена: <span class="best-seller__price-value">990</span> руб.
             </p>
-            <a class="best-seller__button button" href="cart.html">
+            <a class="best-seller__button button modal-open" href="cart.html">
               Заказать
             </a>
           </div>
@@ -169,7 +169,7 @@
           <ul class="about__list">
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_flower" width="31.97" height="37.3">
-                <use xlink:href="img/sprite.svg#icon-flower"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-flower"></use>
               </svg>
               <h3 class="about__item-title">
                 Экологически
@@ -179,7 +179,7 @@
             </li>
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_money" width="46.57" height="23.33">
-                <use xlink:href="img/sprite.svg#icon-money"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-money"></use>
               </svg>
               <h3 class="about__item-title">
                 Скандинавский стиль
@@ -189,7 +189,7 @@
             </li>
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_heart" width="33.05" height="27.86">
-                <use xlink:href="img/sprite.svg#icon-heart"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-heart"></use>
               </svg>
               <h3 class="about__item-title">
                 Увеличивает лайки
@@ -199,7 +199,7 @@
             </li>
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_ball" width="34.37" height="34.73">
-                <use xlink:href="img/sprite.svg#icon-ball"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-ball"></use>
               </svg>
               <h3 class="about__item-title">
                 Связано вручную с
@@ -209,7 +209,7 @@
             </li>
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_rocket" width="54.17" height="23.18">
-                <use xlink:href="img/sprite.svg#icon-rocket"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-rocket"></use>
               </svg>
               <h3 class="about__item-title">
                 Поддержка отечественного
@@ -219,7 +219,7 @@
             </li>
             <li class="about__item">
               <svg class="about__item-icon about__item-icon_gift" width="32.66" height="32.49">
-                <use xlink:href="img/sprite.svg#icon-gift"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-gift"></use>
               </svg>
               <h3 class="about__item-title">
                 Поставляется в
@@ -373,5 +373,44 @@
         </p>
       </div>
     </footer>
+    <div class="modal__wrapper">
+      <div class="modal">
+        <div class="modal__inner">
+          <h2 class="modal__title">
+            Добавить в корзину
+          </h2>
+          <p class="modal__text">
+            Выберите размер:
+          </p>
+          <form action="https://echo.htmlacademy.ru">
+            <ul class="modal__size-list">
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_small" id="size_small">
+                <label class="modal__size-label" for="size_small">
+                  s
+                </label>
+              </li>
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_medium" id="size_medium">
+                <label class="modal__size-label" for="size_medium">
+                  m
+                </label>
+              </li>
+              <li class="modal__size-item">
+                <input class="modal__size-checkbox visually-hidden" type="checkbox" name="size_large" id="size_large">
+                <label class="modal__size-label" for="size_large">
+                  l
+                </label>
+              </li>
+            </ul>
+            <button class="modal__button button" type="submit">
+              Добавить
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="modal__background"></div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
