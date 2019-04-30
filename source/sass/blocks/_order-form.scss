@@ -27,6 +27,10 @@
   border: none;
 }
 
+.order-form__group:last-of-type {
+  margin-bottom: 0;
+}
+
 .order-form__group-list {
   margin: 0;
   padding: 0;
@@ -64,8 +68,8 @@
   margin-bottom: 32px;
 }
 
-.order-form__text-element:last-of-type {
-  margin-bottom: 0;
+.order-form__text-element.text-element_message {
+  margin-bottom: 16px;
 }
 
 .order-form__text-element.text-element_extra {
@@ -153,6 +157,10 @@
 
   .order-form__text-element {
     margin-bottom: 24px;
+  }
+
+  .order-form__text-element:last-of-type {
+    margin-bottom: 0;
   }
 
   .order-form__text-element .text-element__input,

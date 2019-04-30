@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svgxuse.min.js" defer></script>
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav_closed main-nav_nojs">
         <div class="main-nav__head">
           <a class="main-nav__logo" href="index.html">
             <picture>
@@ -290,5 +291,9 @@
         </p>
       </div>
     </footer>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/modal.min.js" defer></script>
   </body>
 </html>

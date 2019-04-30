@@ -48,18 +48,28 @@
 }
 
 .main-nav__toggle {
+  position: relative;
   width: 22px;
   height: 22px;
   margin-top: 6px;
 
   background-color: transparent;
-  background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: 50% 50%;
   border: none;
 
   cursor: pointer;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 1px;
+
+    height: 2px;
+    width: 20px;
+    box-shadow: 0 6px 0 0 $black, 0 12px 0 0 $black;
+    background-color: $black;
+  }
 }
 
 .main-nav__list {
@@ -126,6 +136,51 @@
 
 .main-nav__link-text {
   display: block;
+}
+
+@media (max-width: $screen-tablet - 1px) {
+  .main-nav_closed .main-nav__item {
+    display: none;
+  }
+
+  .main-nav_opened .main-nav__toggle {
+    &::before,
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 10px;
+      left: -2px;
+
+      width: 26px;
+      height: 2px;
+
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav_nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav_nojs .main-nav__head {
+    &::before {
+      display: none;
+    }
+  }
+
+  .main-nav_nojs .main-nav__logo {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $screen-tablet) {

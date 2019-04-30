@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svgxuse.min.js" defer></script>
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav_closed main-nav_nojs">
         <div class="main-nav__head">
           <a class="main-nav__logo" href="index.html">
             <picture>
@@ -95,7 +96,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
@@ -118,7 +119,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart" href="cart.html">
+                  <a class="product__cart modal-open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -134,7 +135,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
@@ -157,7 +158,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart" href="cart.html">
+                  <a class="product__cart modal-open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -173,7 +174,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
@@ -198,7 +199,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart" href="cart.html">
+                  <a class="product__cart modal-open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -227,7 +228,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
 
                   <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
@@ -341,6 +342,9 @@
       </div>
       <div class="modal__background"></div>
     </div>
-    <script src="js/modal.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/modal.min.js" defer></script>
   </body>
 </html>
