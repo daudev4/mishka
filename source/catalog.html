@@ -119,7 +119,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart modal-open" href="cart.html">
+                  <a class="product__cart js-modal__open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -158,7 +158,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart modal-open" href="cart.html">
+                  <a class="product__cart js-modal__open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -199,7 +199,7 @@
                     </span>
                     руб.
                   </b>
-                  <a class="product__cart modal-open" href="cart.html">
+                  <a class="product__cart js-modal__open" href="cart.html">
                     <svg class="product__cart-icon" width="20.29" height="18.85">
                       <use xlink:href="img/sprite.svg#icon-cart"></use>
                     </svg>
@@ -304,8 +304,8 @@
         </p>
       </div>
     </footer>
-        <div class="modal__wrapper">
-      <div class="modal">
+    <div class="modal__wrapper modal__wrapper_hidden js-modal__wrapper">
+      <div class="modal__window js-modal__window">
         <div class="modal__inner">
           <h2 class="modal__title">
             Добавить в корзину
@@ -334,13 +334,12 @@
                 </label>
               </li>
             </ul>
-            <button class="modal__button button" type="submit">
+            <button class="modal__button button js-modal__close" type="submit">
               Добавить
             </button>
           </form>
         </div>
       </div>
-      <div class="modal__background"></div>
     </div>
     <script src="js/menu.min.js"></script>
     <script src="js/svgxuse.min.js"></script>

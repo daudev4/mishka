@@ -1,10 +1,12 @@
-.modal__background {
+.modal__wrapper {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
 
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
 
@@ -12,31 +14,19 @@
   overflow: auto;
 }
 
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 100;
-
+.modal__wrapper_hidden {
   display: none;
+}
+
+.modal__window {
   width: 320px;
-  margin: 0 auto;
 
   text-align: center;
 
-  transform: translate(-50%, -50%);
   background-color: #ffffff;
   box-shadow:
     inset 0 0 0 1px $grey--dark,
     0 5px 10px 0 rgba(0, 1, 1, 0.25);
-}
-
-.modal_show {
-  display: block;
-}
-
-.modal_show + .modal__background {
-  display: block;
 }
 
 .modal__inner {
@@ -118,7 +108,7 @@
 }
 
 @media (min-width: $screen-tablet) {
-  .modal {
+  .modal__window {
     min-width: 566px;
   }
 
