@@ -1,3 +1,4 @@
+@import "normalize";
 @import "_fonts";
 @import "_base";
 @import "_variables";
@@ -14,7 +15,7 @@
 @import "blocks/_social";
 @import "blocks/_main-footer";
 @import "blocks/_copyright";
-@import "blocks/_modal.scss";
+@import "blocks/_modal";
 @import "blocks/_goods";
 @import "blocks/_product";
 @import "blocks/_production";

@@ -59,11 +59,25 @@
 }
 
 .contacts__map {
+  position: relative;
+
   height: 457px;
   margin-bottom: 39px;
 }
 
+.contacts__map-frame {
+  position: relative;
+  z-index: 3;
+
+  border: none;
+}
+
 .map__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   display: block;
   height: 457px;
   margin: 0 auto;

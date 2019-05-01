@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/picturefill.min.js"></script>
-    <script src="js/svgxuse.min.js" defer></script>
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav_closed main-nav_nojs">
         <div class="main-nav__head">
           <a class="main-nav__logo">
             <picture>
@@ -154,7 +155,7 @@
             <p class="best-seller__price">
               Цена: <span class="best-seller__price-value">990</span> руб.
             </p>
-            <a class="best-seller__button button modal-open" href="cart.html">
+            <a class="best-seller__button button js-modal__open" href="cart.html">
               Заказать
             </a>
           </div>
@@ -300,6 +301,7 @@
             </ul>
           </div>
           <div class="contacts__map map">
+            <iframe class="contacts__map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2576.7794407178944!2d30.320318980500257!3d59.93871832980836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1556647749451!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             <picture>
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
@@ -373,8 +375,8 @@
         </p>
       </div>
     </footer>
-    <div class="modal__wrapper">
-      <div class="modal">
+    <div class="modal__wrapper modal__wrapper_hidden js-modal__wrapper">
+      <div class="modal__window js-modal__window">
         <div class="modal__inner">
           <h2 class="modal__title">
             Добавить в корзину
@@ -403,14 +405,16 @@
                 </label>
               </li>
             </ul>
-            <button class="modal__button button" type="submit">
+            <button class="modal__button button js-modal__close" type="submit">
               Добавить
             </button>
           </form>
         </div>
       </div>
-      <div class="modal__background"></div>
     </div>
-    <script src="js/modal.js"></script>
+    <script src="js/menu.min.js"></script>
+    <script src="js/svgxuse.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/modal.min.js" defer></script>
   </body>
 </html>
