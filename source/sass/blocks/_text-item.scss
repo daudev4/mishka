@@ -25,8 +25,12 @@
     border-color: $seafoam;
   }
 
+  &:-ms-input-placeholder {
+    color: rgba($grey--darkest, 0.3);
+  }
+
   &::placeholder {
-    @include font-mix($font-family, 400, $font-size--xs, $font-line-height--xxs, normal, rgba($grey--darkest, 0.3));
+    color: rgba($grey--darkest, 0.3);
   }
 }
 
