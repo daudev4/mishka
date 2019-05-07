@@ -40,3 +40,7 @@
     }
   }
 }
+
+@mixin transition($property: all, $duration: 0.2s, $function: ease-in-out, $delay: 0s) {
+  transition: $property $duration $function $delay;
+}

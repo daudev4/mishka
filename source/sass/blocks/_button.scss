@@ -22,4 +22,6 @@
   &:active {
     color: rgba($white, 0.3);
   }
+
+  @include transition();
 }

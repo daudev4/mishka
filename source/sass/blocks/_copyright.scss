@@ -11,6 +11,7 @@
   text-align: left;
 
   @include link-effects (#000000, 1, 0.3, $greeny, 1 , 0.3);
+  @include transition();
 }
 
 .copyright__link-text {

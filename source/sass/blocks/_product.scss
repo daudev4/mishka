@@ -6,6 +6,8 @@
   &:active {
     box-shadow: 0 3px 5px 0 $grey--dark;
   }
+
+  @include transition();
 }
 
 .product__image {
@@ -37,6 +39,8 @@
 
   @include font-mix($font-family, 700, $font-size--xs, $font-line-height--s, normal, #000000);
   color: inherit;
+
+  @include transition();
 }
 
 .product__title-link {
@@ -73,6 +77,8 @@
 
 .product__cart-icon {
   fill: rgba($icon-original, 0.2);
+
+  @include transition();
 }
 
 @media (min-width: $screen-tablet) {

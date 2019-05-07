@@ -83,6 +83,8 @@
   text-transform: uppercase;
 
   border: 2px solid rgba($grey--darkest, 0.1);
+
+  @include transition();
 }
 
 .modal__size-checkbox:hover + .modal__size-label,
@@ -105,6 +107,8 @@
   &:focus {
     background-color: $seafoam;
   }
+
+  @include transition();
 }
 
 @media (min-width: $screen-tablet) {

@@ -39,11 +39,11 @@ document.addEventListener('click', function(evt) {
     }
 })
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (isModalWindowOpen) {
-      modalWrapper.classList.add("modal__wrapper_hidden");
+      modalWrapper.classList.add('modal__wrapper_hidden');
     }
   }
 });

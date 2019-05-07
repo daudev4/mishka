@@ -88,6 +88,8 @@
   &:active {
     opacity: 0.3;
   }
+
+  @include transition();
 }
 
 .reviews__arrow_prev {

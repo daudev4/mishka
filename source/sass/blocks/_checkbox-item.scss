@@ -16,6 +16,8 @@
 
     background-color: transparent;
     border: 2px solid $grey--darkest;
+
+    @include transition();
   }
 
   &:hover::before {

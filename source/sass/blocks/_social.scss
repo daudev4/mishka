@@ -28,6 +28,8 @@
 
 .social__link-icon {
   fill: $icon-original;
+
+  @include transition();
 }
 
 .social__link_facebook .social__link-icon {

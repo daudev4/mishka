@@ -62,10 +62,14 @@
     min-height: 108px;
     margin-top: -5px;
   }
+
+  @include transition();
 }
 
 .banner__link-icon {
   fill: rgba(#149080, 0.5);
+
+  @include transition();
 }
 
 .banner__link_interior .banner__link-icon {

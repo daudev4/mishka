@@ -50,6 +50,8 @@
 
   .main-footer__logo-image {
     display: block;
+
+    @include transition();
   }
 
   .main-footer__social {
