@@ -6,7 +6,7 @@
 *.pdf
 *.psd
 *.sublime*
-build/
+package-lock.json
 node_modules/
 npm-debug.*
 Thumbs.db
